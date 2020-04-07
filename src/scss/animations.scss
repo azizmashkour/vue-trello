@@ -1,0 +1,206 @@
+.bounce-in-left-enter-active {
+  -webkit-animation-name: bounceInLeft;
+  -webkit-animation-duration: 2s;
+  -moz-animation-name: bounceInLeft;
+  -moz-animation-duration: 2s;
+  -ms-animation-name: bounceInLeft;
+  -ms-animation-duration: 2s;
+  -o-animation-name: bounceInLeft;
+  -o-animation-duration: 2s;
+  animation-name: bounceInLeft;
+  animation-duration: 2s;
+}
+
+.bounce-in-left-leave-active {
+  -webkit-animation-name: bounceInLeft;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-duration: 2s;
+  -moz-animation-name: bounceInLeft;
+  -moz-animation-direction: reverse;
+  -moz-animation-duration: 2s;
+  -ms-animation-name: bounceInLeft;
+  -ms-animation-duration: 2s;
+  -o-animation-name: bounceInLeft;
+  -o-animation-direction: reverse;
+  -o-animation-duration: 2s;
+  animation-name: bounceInLeft;
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+
+.tasks-worldwide:hover, .businesses-companies:hover, .projects-worldwide:hover {
+  animation: tada 1s linear both;
+  animation-duration: 2s;
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    opacity: 0;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+
+@keyframes tada {
+   0% {transform: scale(1);}
+   10%, 20% {transform: scale(0.9) rotate(-3deg);}
+   30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+   40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+   100% {transform: scale(1) rotate(0);}
+}
+
+@-webkit-keyframes bounceInLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(4%);
+  }
+  99% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@-moz-keyframes bounceInLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(4%);
+  }
+  99% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@-ms-keyframes bounceInLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(4%);
+  }
+  99% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@-o-keyframes bounceInLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(4%);
+  }
+  99% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  1% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  35% {
+    transform: translateX(4%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// App loader animation
+
+@keyframes indeterminate_first {
+    0% {
+        left: -100%;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 10%;
+    }
+}
+
+@keyframes indeterminate_second {
+    0% {
+        left: -150%;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 10%;
+    }
+}
