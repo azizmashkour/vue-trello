@@ -1,0 +1,424 @@
+.btn-success {
+  background-color: #4dbf39 !important;
+  border-color: #4dbf39 !important;
+}
+body {
+  font-weight: 200 !important;
+  line-height: 1 !important;
+}
+.border-top-1 {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+.card-header {
+  background-color: transparent !important;
+  font-weight: 300;
+  color: rgb(58, 69, 87);
+}
+a {
+  text-decoration: none !important;
+}
+.card-items {
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  -moz-transition: -moz-transform 0.5s ease-out;
+  -o-transition: -o-transform 0.5s ease-out;
+  -ms-transition: -ms-transform 0.5s ease-out;
+  border-radius: 6px !important;
+  border: 0px !important;
+  color: #fff;
+}
+.card-items:hover {
+  z-index: 1;
+  box-shadow: 0 0 18px 0 rgba(19, 48, 66, 0.07);
+  transform: translateY(-1px);
+}
+.global-easilyer-container {
+  background-color: #edf2f7;
+  min-height: 100vh;
+  overflow: hidden;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.item-cell {
+  border: none;
+  width: 100%;
+  padding: 0 18px 9px;
+  border-radius: 0;
+}
+.cell-label {
+  display: block;
+  color: #8b97ad;
+  font-size: 90%;
+}
+.select-value-item {
+  font-size: 90%;
+  border-radius: 4px;
+  padding: 2px 5px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.image-badge.extra-small {
+  width: 20px;
+  height: 20px;
+}
+.badge-content {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+}
+.image-badge-content {
+  background-image: url("./assets/images/idpic.jpg");
+}
+.badge-initials {
+  font-size: 0.7em;
+  line-height: 1;
+  background-color: #73819d;
+  border-radius: 5px;
+  padding: 4px 2px;
+  color: #fff;
+}
+.has-value {
+  margin-left: -5px;
+}
+
+/* sidebar styles */
+.new-project-sidebar {
+  height: 100%;
+  width: 20rem;
+  display: block;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 12px 0 15px -4px rgba(200, 209, 220, 0.8),
+    -12px 0 15px -4px rgba(232, 232, 232, 0.8);
+  z-index: 99999999;
+}
+.sidebar-closer-btn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: -3rem;
+  background-color: #fff;
+  top: 1rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px 3px #ccc;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  -ms-transition: -ms-transform 0.3s ease-out;
+}
+.sidebar-closer-btn:hover {
+  transform: translateY(-1px);
+}
+.sidebar-closer-rotate-right {
+  height: 23px;
+  width: 1px;
+  background-color: #73809c;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+.sidebar-closer-rotate-left {
+  height: 23px;
+  width: 1px;
+  margin-left: 11px;
+  background-color: #73809c;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.sidebar-header {
+  padding: 2rem;
+  font-size: 30px;
+  text-align: center;
+  border-bottom: 1px solid #dfdfdf;
+}
+.sidebar-content {
+  padding: 2rem;
+}
+input:focus,
+input:active,
+button:focus,
+.btn:focus,
+.btn:active,
+.fieldset-label:focus,
+.fieldset-label:active,
+.form-control:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Task details Card style */
+.card-due-date {
+  font-size: 13px;
+  color: gray;
+}
+.btn-tag {
+  font-size: 11px !important;
+}
+.more-details {
+  position: absolute;
+  top: -1.5rem;
+  border-radius: 4px;
+  font-size: 30px;
+  color: gray;
+}
+.dropdown-item {
+  font-weight: 200 !important;
+  font-size: 14px !important;
+  padding: 0.25rem 1rem !important;
+}
+.dropdown-menu {
+  min-width: 6rem !important;
+}
+.tasks-group-content {
+  background-color: #dfe7ef;
+  border-radius: 6px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.add-task-input {
+  background-color: #edf2f7;
+  border-radius: 6px;
+}
+.fieldset-label {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  padding-left: 3px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 88%;
+  color: gray;
+  font-weight: 100;
+  font-size: 14px;
+}
+.add-more-btn {
+  width: 12%;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 5px;
+  border-right: 1px solid #dce5ec;
+}
+.task-managment {
+  font-weight: 300;
+  font-size: 3rem;
+}
+// .card-overflow-hidden {
+//   overflow-y: scroll;
+//   max-height: 500px;
+// }
+input,
+.form-control {
+  font-weight: 100 !important;
+}
+.more-details-rotated {
+  transform: rotate(90deg);
+  top: -1.2rem;
+}
+.dropdown-menu-right-zero {
+  top: 15px !important;
+  right: 0 !important;
+  left: -17.8rem !important;
+  width: 20rem;
+  border-radius: 6px !important;
+  border: 0 !important;
+  transition: 0.5s ease all;
+}
+
+/* Modal styles */
+
+.edit-task-modal-title {
+  font-weight: 400;
+  font-size: 14px;
+}
+.modal-header,
+.edit-task-modal-content,
+.task-edit-container {
+  border-radius: 6px !important;
+}
+.edit-task-modal-footer {
+  width: 13%;
+}
+.close-edit-task-header {
+  transform: rotate(45deg);
+}
+.close-edit-task-modal {
+  font-weight: 200;
+}
+#editTaskModal {
+  padding-right: 0 !important;
+}
+
+.text-elipsis-ovreflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 14rem;
+}
+.border-radius-6 {
+  border-radius: 6px;
+}
+.popover {
+  border: 0 !important;
+}
+
+// App loader styles
+.linear-activity {
+  overflow: hidden;
+  width: 100%;
+  height: 5px;
+  background-color: #b3e5fc;
+  margin: 0;
+}
+
+.determinate {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+  -webkit-transition: width 500ms ease-out 1s;
+  -moz-transition: width 500ms ease-out 1s;
+  -o-transition: width 500ms ease-out 1s;
+  transition: width 500ms ease-out 1s;
+  background-color: #03a9f4;
+}
+
+.indeterminate {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.indeterminate:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #03a9f4;
+  animation: indeterminate_first 1.5s infinite ease-out;
+}
+
+.indeterminate:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #4fc3f7;
+  animation: indeterminate_second 1.5s infinite ease-in;
+}
+
+// Validator styles
+
+.dirty {
+  border-color: #5A5;
+  background: #EFE;
+}
+
+.dirty:focus {
+  outline-color: #8E8;
+}
+
+.error {
+  border-color: red;
+  background: #FDD;
+}
+
+.error:focus {
+  outline-color: #F99;
+}
+.font-12 {
+  font-size: 12px;
+}
+
+// Checkbox styles
+
+.styled-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+    // box-shadow: 0 0 18px 0 rgba(19, 48, 66, 0.07);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #4dbf39;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #4dbf39;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
