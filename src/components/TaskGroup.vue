@@ -9,7 +9,7 @@
             v-model="taskTitle"
             type="text"
             class="fieldset-label"
-            :class="{ 'is-invalid': submitted && $v.taskTitle.$error }"
+            :class="{ 'is-invalid': $v.taskTitle.$error }"
           />
           <b-dropdown
             :id="`dropdown-${group.id}_form`"
@@ -64,11 +64,13 @@
                   multiple
                 ></v-select>
               </b-form-group>
+
+              <b-button @click="addTask" variant="success">Save</b-button>
             </b-dropdown-form>
           </b-dropdown>
         </div>
         <div
-          v-if="submitted && !$v.taskTitle.required"
+          v-if="!$v.taskTitle.required"
           class="invalid-feedback"
         >Task title is required(12 characters minimum)</div>
       </form>
@@ -95,6 +97,7 @@ import { required, minLength } from 'vuelidate/lib/validators'
 import Task from '@/components/Task.vue'
 import draggable from 'vuedraggable'
 import { Group, Task as TaskModel } from '../models'
+import { BDropdown } from 'bootstrap-vue'
 
 export default Vue.extend({
   name: 'TaskGroup',
@@ -112,8 +115,7 @@ export default Vue.extend({
       taskDescription: '',
       taskStartDate: '',
       taskDueDate: '',
-      assignees: [],
-      submitted: false
+      assignees: []
     }
   },
   validations: {
@@ -122,7 +124,6 @@ export default Vue.extend({
   methods: {
     ...mapActions(['persistData']),
     addTask () {
-      this.submitted = true
       this.$v.$touch()
       if (this.$v.$invalid) {
         return
@@ -130,7 +131,7 @@ export default Vue.extend({
 
       const task = new TaskModel(this.taskTitle, {
         description: this.taskDescription,
-        task: this.taskStartDate,
+        start: this.taskStartDate,
         due: this.taskDueDate
       })
 
@@ -138,12 +139,14 @@ export default Vue.extend({
         task.assignees = this.assignees
       }
 
+      (this.$refs.dropdown as BDropdown).hide(true)
       this.group.addTask(task)
       this.clear()
       this.persistData()
     },
     clear () {
       this.taskTitle = ''
+      this.$v.taskTitle && this.$v.taskTitle.$reset()
       this.taskDescription = ''
       this.taskStartDate = ''
       this.taskDueDate = ''
