@@ -35,12 +35,13 @@
           <div class="progress">
             <div
               class="progress-bar progress-bar-striped"
+              :class="progressCls"
               role="progressbar"
-              style="width: 25%;"
-              aria-valuenow="25"
+              :style="{width: project.progress + '%'}"
+              :aria-valuenow="project.progress"
               aria-valuemin="0"
               aria-valuemax="100"
-            >25%</div>
+            >{{ project.progress }}%</div>
           </div>
         </div>
       </div>
@@ -58,7 +59,14 @@ export default Vue.extend({
     project: Project
   },
   data () {
-    return {}
+    return {
+      progressCls: {
+        'bg-danger': this.project.progress <= 30,
+        'bg-info': this.project.progress <= 70,
+        'bg-primary': this.project.progress <= 99,
+        'bg-success': this.project.progress === 100
+      }
+    }
   }
 })
 </script>
