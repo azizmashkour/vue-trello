@@ -1,8 +1,5 @@
 <template>
   <transition name="bounce-in-left">
-    <!-- <div class="linear-activity" v-if="loader">
-      <div class="indeterminate"></div>
-    </div> -->
     <div class="new-project-sidebar" v-show="show">
       <div class="sidebar-closer-btn" @click="close">
         <div class="sidebar-closer-rotate-left">
@@ -16,8 +13,17 @@
             <form @submit.prevent="saveProject">
               <div class="form-group">
                 <label for="ProjectName">Project name</label>
-                <input v-model="name" type="text" class="form-control" id="ProjectName" :class="{ 'is-invalid': submitted && $v.name.$error }"/>
-                <div v-if="submitted && !$v.name.required" class="invalid-feedback">Project name is required(4 characters minimum)</div>
+                <input
+                  v-model="name"
+                  type="text"
+                  class="form-control"
+                  id="ProjectName"
+                  :class="{ 'is-invalid': $v.name.$error }"
+                />
+                <div
+                  v-if="!$v.name.required"
+                  class="invalid-feedback"
+                >Project name is required(4 characters minimum)</div>
               </div>
               <div class="form-group">
                 <label for="ProjectMembers">Members</label>
@@ -48,10 +54,8 @@ export default Vue.extend({
     return {
       name: '',
       members: [],
-      progress: 0,
       closed: true,
-      loader: false,
-      submitted: false
+      loader: false
     }
   },
   validations: {
@@ -61,13 +65,12 @@ export default Vue.extend({
     ...mapActions(['createProject', 'persistData']),
     saveProject () {
       this.loader = true
-      this.submitted = true
       this.$v.$touch()
       if (this.$v.$invalid) {
         return
       }
 
-      const project = new Project(this.name, this.progress, this.members)
+      const project = new Project(this.name, this.members)
       this.createProject(project)
         .then(() => {
           this.resetForm()
@@ -80,6 +83,7 @@ export default Vue.extend({
       this.$emit('close')
     },
     resetForm () {
+      this.$v.name && this.$v.name.$reset()
       this.name = ''
       this.members = []
     }
