@@ -15,8 +15,8 @@ export class Task extends BaseModel {
     super()
     this.title = title
 
-    this.start = data.start ? new Date(data.start) : new Date()
-    this.due = data.due ? new Date(data.due) : new Date()
+    this.start = data.start
+    this.due = data.due
     this.description = data.description || ''
     this.comments = data.comments || ''
     this.tags = data.tags || []
@@ -42,16 +42,20 @@ export class Task extends BaseModel {
   }
 
   toJson () {
-    return {
+    const data = {
       id: this.id,
       title: this.title,
       description: this.description,
       comments: this.comments,
-      start: this.start.toString(),
-      due: this.due.toString(),
+      start: this.start,
+      due: this.due,
       status: this.status,
       tags: this.tags,
       assignees: this.assignees?.map(member => member.toJson())
     }
+
+    console.log('Task Json', data)
+
+    return data
   }
 }
