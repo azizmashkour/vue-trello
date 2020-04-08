@@ -1,8 +1,8 @@
 <template>
   <main id="app" class="global-easilyer-container">
-    <!-- <div class="linear-activity">
-        <div class="indeterminate"></div>
-    </div>-->
+    <div class="linear-activity" v-if="isLoading">
+      <div class="indeterminate"></div>
+    </div>
     <div class="p-5">
       <div class="row" v-show="showTitle">
         <div class="col-md-12 col-12 mb-5">
@@ -20,7 +20,8 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      showTitle: false
+      showTitle: false,
+      isLoading: false
     }
   },
   mounted () {
@@ -32,6 +33,12 @@ export default Vue.extend({
       }
 
       next()
+    })
+
+    this.$store.subscribeAction(() => {
+      this.isLoading = true
+
+      setTimeout(() => { this.isLoading = false }, 1000)
     })
 
     this.$store.dispatch('loadProjects')
