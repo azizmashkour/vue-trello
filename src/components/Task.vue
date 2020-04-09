@@ -67,7 +67,7 @@ export default Vue.extend({
   },
   mounted () {
     this.$watch('task.status', (value) => {
-      console.log('Task status changed', value)
+      // console.log('Task status changed', value)
       this.persistData()
     })
   },

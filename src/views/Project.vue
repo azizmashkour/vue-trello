@@ -174,7 +174,7 @@ export default Vue.extend({
       this.$bvModal.show('editTaskModal')
     },
     async saveTask () {
-      console.log('Call to save task')
+      // console.log('Call to save task')
       const index = this.selectedGroup.tasks.findIndex(item => item.id === this.editingTask.id)
 
       if (index > -1) {

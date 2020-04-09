@@ -54,7 +54,7 @@ export class Task extends BaseModel {
       assignees: this.assignees?.map(member => member.toJson())
     }
 
-    console.log('Task Json', data)
+    // console.log('Task Json', data)
 
     return data
   }
