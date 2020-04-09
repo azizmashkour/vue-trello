@@ -8,6 +8,7 @@ This project was generated with [Vue CLI >= 3](https://github.com/vuejs/vue-cli)
 - window.localStorage: Used for storing datas into device storages. [read more here](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
 - vuedraggable: Used to drag tasks between Task-groups. [read more here](https://github.com/SortableJS/Vue.Draggable)
 - vue-select: Used for multiple selections in all select fields. [read more here](https://vue-select.org/)
+- firebase: Used for hosting of the demo app. [read more here](https://console.firebase.google.com/)
 
 ## Getting Started
 
@@ -32,7 +33,7 @@ Run `yarn test:unit` or `npm run test` to execute the unit tests via [Karma](htt
 Run `yarn test:e2e` or `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Demo
-You will find the working project [here](to be updated)
+You will find the working project [here](https://vue-trello-97fd7.firebaseapp.com/)
 
 ## Other details
 You can help improve by adding any comment or creating a new issue [here](https://github.com/azizmashkour/swapi-app-test/issues/new)
