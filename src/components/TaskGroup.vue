@@ -9,8 +9,7 @@
             v-model="taskTitle"
             type="text"
             class="fieldset-label"
-            :class="{ 'is-invalid': $v.taskTitle.$error }"
-          />
+            :class="{ 'is-invalid': $v.taskTitle.$dirty && $v.taskTitle.$error }"/>
           <b-dropdown
             :id="`dropdown-${group.id}_form`"
             size="sm"
@@ -69,10 +68,11 @@
             </b-dropdown-form>
           </b-dropdown>
         </div>
+        <div v-if="!$v.taskTitle.required" class="invalid-feedback d-block">Task title is required</div>
         <div
-          v-if="!$v.taskTitle.required"
-          class="invalid-feedback"
-        >Task title is required(12 characters minimum)</div>
+          v-if="!$v.taskTitle.minLength"
+          class="invalid-feedback d-block"
+        >Task title is must have 12 characters minimum</div>
       </form>
       <div class="card-overflow-hidden">
         <draggable :list="group.tasks" :clone="cloneTask" group="tasks" @end="dragEnded">
@@ -125,7 +125,12 @@ export default Vue.extend({
     ...mapActions(['persistData']),
     addTask () {
       this.$v.$touch()
-      if (this.$v.$invalid) {
+      if (this.$v.$invalid || this.$v.$error) {
+        this.$bvToast.toast('Please review task title. It is required and must have 12 charactere minimum', {
+          title: 'Warning !',
+          variant: 'info'
+        })
+
         return
       }
 
