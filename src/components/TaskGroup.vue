@@ -5,11 +5,13 @@
       <form class="add-task-input mb-3" @submit.prevent="addTask">
         <div class="d-flex align-items-center">
           <span class="add-more-btn">+</span>
-          <input
-            v-model="taskTitle"
-            type="text"
-            class="fieldset-label"
-            :class="{ 'is-invalid': $v.taskTitle.$dirty && $v.taskTitle.$error }"/>
+          <input v-model="taskTitle" type="text" class="fieldset-label" id="popover-button-open"/>
+          <div class="text-center">
+
+          <b-popover show target="popover-button-open"  placement="top">
+            Type here to <strong>add new task</strong>
+          </b-popover>
+        </div>
           <b-dropdown
             :id="`dropdown-${group.id}_form`"
             size="sm"
@@ -68,7 +70,6 @@
             </b-dropdown-form>
           </b-dropdown>
         </div>
-        <div v-if="!$v.taskTitle.required" class="invalid-feedback d-block">Task title is required</div>
         <div
           v-if="!$v.taskTitle.minLength"
           class="invalid-feedback d-block"
