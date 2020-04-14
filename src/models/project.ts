@@ -53,7 +53,11 @@ export class Project extends BaseModel {
       return previous + current.tasks.filter((item) => item.checked).length
     }, 0)
 
-    return this.taskTotal ? (doneCount / this.taskTotal) * 100 : 0
+    const sumCount = this.taskTotal ? (doneCount / this.taskTotal) * 100 : 0
+
+    const roundedCount = Math.round(sumCount)
+
+    return roundedCount
   }
 
   addGroup (group: Group) {
