@@ -5,6 +5,11 @@
       <div class="logo-part-2"></div>
       <div class="logo-part-3"></div>
     </div>
+    <div class="col-md-10 mx-auto">
+      <b-alert show dismissible variant="warning">
+        This website will use your cookies to save datas on your local machine. CLick the <b>x</b> button at the top-right of your screen to acceppt the cookies policies and start enjoying 😅.
+      </b-alert>
+    </div>
     <div class="col-md-12 col-12 mb-5">
       <div class="p-5 text-dark text-center border-radius-6">
         <h4 class="mb-2">Tasker for teams</h4>
@@ -36,7 +41,7 @@
               </div>
             </div>
             <div class="col-md-12 col-12 col-lg-6">
-              <div class="desc-shadow card" style="width: 28rem;">
+              <div class="desc-shadow card text-left" style="width: 28rem;">
                 <div class="card-body">
                   <p class="card-text">
                     Easily create and manage your project tasks with the largest
@@ -44,14 +49,14 @@
                   </p>
                 </div>
               </div>
-              <div class="desc-shadow card mt-3" style="width: 25rem;">
+              <div class="desc-shadow card text-left mt-3" style="width: 25rem;">
                 <div class="card-body">
                   <p
                     class="card-text"
                   >From ideas, thinking with a great team to bring your ideas to reality quickly.</p>
                 </div>
               </div>
-              <div class="desc-shadow card mt-3" style="width: 21rem;">
+              <div class="desc-shadow card text-left mt-3" style="width: 21rem;">
                 <div class="card-body">
                   <p class="card-text">
                     Weither private, small, public and big organization,
