@@ -1,6 +1,6 @@
-import { IModel } from './model.interface'
+import { Model } from './model.interface'
 
-export class BaseModel implements IModel {
+export class BaseModel implements Model {
   id: string
 
   constructor () {
